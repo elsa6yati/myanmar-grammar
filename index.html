@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ဆဋ္ဌမတန်း မြန်မာ · အပိုင်း ၂ · ကြိယာအစု</title>
+    <meta name="theme-color" content="#500724">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Myanmar:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* =========================================================
+           Grade 6 Myanmar Grammar — Part 2 (Pink Edition)
+           ဆဋ္ဌမတန်း မြန်မာ · အပိုင်း ၂ · ကြိယာအစု
+           ========================================================= */
+        :root {
+            --berry-dark: #500724;
+            --berry-deep: #701a3c;
+            --magenta: #9d174d;
+            --rose-primary: #db2777;
+            --rose-bright: #f472b6;
+            --rose-light: #fbcfe8;
+            --blush: #fce7f3;
+            --paper: #fdf2f8;
+            --ink: #4a0e2e;
+            --muted: #83385d;
+            --line: #f5d0e3;
+            --white: #ffffff;
+            --shadow: 0 16px 42px rgba(80, 7, 36, 0.09);
+            --radius: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 96px;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--paper);
+            font-family: "Noto Sans Myanmar", "DM Sans", sans-serif;
+            line-height: 1.9;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button, input {
+            font: inherit;
+        }
+
+        ::selection {
+            background: var(--rose-light);
+            color: var(--berry-dark);
+        }
+
+        /* Sticky Navigation */
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            min-height: 76px;
+            padding: 12px clamp(20px, 5vw, 76px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            background: rgba(80, 7, 36, 0.96);
+            color: var(--white);
+            border-bottom: 1px solid rgba(244, 114, 182, 0.24);
+            box-shadow: 0 8px 26px rgba(80, 7, 36, 0.2);
+            backdrop-filter: blur(14px);
+            transition: min-height 0.25s ease, padding 0.25s ease;
+        }
+
+        .site-nav.small {
+            min-height: 62px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .brand-icon {
+            display: grid;
+            place-items: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 13px;
+            background: linear-gradient(145deg, #fbcfe8, #db2777);
+            font-size: 22px;
+            box-shadow: 0 0 20px rgba(244, 114, 182, 0.35);
+        }
+
+        .brand-name {
+            font-size: 14.5px;
+        }
+
+        .brand-name span {
+            color: var(--rose-light);
+            font-size: 12.5px;
+            font-weight: 500;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: clamp(16px, 3vw, 36px);
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links > li {
+            position: relative;
+        }
+
+        .nav-links > li > a {
+            display: block;
+            padding: 12px 0;
+            color: #fce7f3;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links > li > a:hover,
+        .nav-links > li > a:focus-visible {
+            color: var(--rose-bright);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 280px;
+            margin: 0;
+            padding: 8px;
+            list-style: none;
+            background: #701a3c;
+            border: 1px solid rgba(244, 114, 182, 0.28);
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+        }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu {
+            display: block;
+            animation: menu-in 0.18s ease both;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 14px;
+            color: #fce7f3;
+            border-radius: 9px;
+            font-size: 13.5px;
+            line-height: 1.6;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(244, 114, 182, 0.22);
+            color: #fbcfe8;
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 44px;
+            height: 42px;
+            padding: 10px;
+            border: 1px solid rgba(251, 207, 232, 0.3);
+            border-radius: 10px;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 2px;
+            margin: 5px 0;
+            border-radius: 4px;
+            background: var(--white);
+        }
+
+        /* School Strip */
+        .school-strip {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 10px 18px;
+            color: var(--magenta);
+            background: var(--blush);
+            border-bottom: 1px solid var(--rose-light);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .school-mark {
+            display: grid;
+            place-items: center;
+            width: 48px;
+            height: 48px;
+            border: 2px solid var(--rose-primary);
+            border-radius: 50%;
+            background: var(--white);
+            color: var(--magenta);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .school-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 480px;
+            position: relative;
+            isolation: isolate;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            padding: 72px 24px 96px;
+            color: var(--white);
+            text-align: center;
+            background: radial-gradient(ellipse at 50% 100%, #9d174d 0%, transparent 58%),
+                        linear-gradient(135deg, #500724, #831843 55%, #500724);
+        }
+
+        .hero::before,
+        .hero::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 440px;
+            height: 440px;
+            border: 1px solid rgba(244, 114, 182, 0.2);
+            border-radius: 50%;
+        }
+
+        .hero::before {
+            top: -260px;
+            left: -110px;
+            box-shadow: 0 0 0 35px rgba(244, 114, 182, 0.04), 0 0 0 75px rgba(244, 114, 182, 0.025);
+        }
+
+        .hero::after {
+            right: -180px;
+            bottom: -300px;
+            width: 600px;
+            height: 600px;
+            box-shadow: 0 0 0 45px rgba(244, 114, 182, 0.04);
+        }
+
+        .hero-glow {
+            position: absolute;
+            z-index: -1;
+            width: 480px;
+            height: 250px;
+            border-radius: 50%;
+            background: #f472b6;
+            filter: blur(130px);
+            opacity: 0.26;
+        }
+
+        #petalCanvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+        }
+
+        .texter {
+            margin: 0 0 8px;
+            color: #fde047;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+        }
+
+        .eyebrow, .section-kicker {
+            display: inline-block;
+            color: var(--rose-light);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+        }
+
+        .section-kicker {
+            color: var(--rose-primary);
+        }
+
+        .hero-title {
+            margin: 14px 0 12px;
+            color: var(--white);
+            font-size: clamp(32px, 6vw, 52px);
+            line-height: 1.35;
+            font-weight: 700;
+            text-shadow: 0 4px 28px rgba(219, 39, 119, 0.45);
+        }
+
+        .hero-content > p {
+            max-width: 620px;
+            margin: 14px auto 30px;
+            color: #fce7f3;
+            font-size: clamp(15px, 2vw, 17.5px);
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 48px;
+            padding: 12px 26px;
+            border: 0;
+            border-radius: 999px;
+            color: #500724;
+            background: linear-gradient(110deg, #fbcfe8, #f472b6);
+            box-shadow: 0 8px 28px rgba(244, 114, 182, 0.35);
+            font-size: 14.5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .hero-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(244, 114, 182, 0.5);
+        }
+
+        .hero-button.secondary {
+            color: var(--white);
+            background: rgba(255, 255, 255, 0.13);
+            border: 1px solid rgba(251, 207, 232, 0.42);
+            box-shadow: none;
+        }
+
+        .hero-button.secondary:hover {
+            background: rgba(255, 255, 255, 0.22);
+        }
+
+        .credit {
+            position: absolute;
+            z-index: 2;
+            bottom: 18px;
+            right: clamp(18px, 5vw, 64px);
+            margin: 0;
+            color: #fbcfe8;
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            text-align: right;
+        }
+
+        .credit strong {
+            color: var(--white);
+        }
+
+        /* Quick Navigation Cards */
+        .figure-index {
+            padding: 56px clamp(18px, 5vw, 76px) 48px;
+            background: var(--white);
+            border-bottom: 1px solid var(--line);
+            text-align: center;
+        }
+
+        .figure-index h2, .quiz-section h2 {
+            margin: 6px 0 6px;
+            color: var(--magenta);
+            font-size: clamp(24px, 4vw, 32px);
+        }
+
+        .section-intro {
+            margin: 0 auto 24px;
+            color: var(--muted);
+            font-size: 14.5px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            max-width: 1080px;
+            margin: 26px auto 0;
+        }
+
+        .Box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 126px;
+            padding: 22px 18px;
+            border: 1px solid var(--rose-light);
+            border-radius: 16px;
+            background: linear-gradient(145deg, #fdf2f8, #fce7f3);
+            box-shadow: 0 5px 16px rgba(219, 39, 119, 0.05);
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .Box:hover {
+            transform: translateY(-4px);
+            border-color: var(--rose-primary);
+            box-shadow: 0 12px 25px rgba(219, 39, 119, 0.14);
+        }
+
+        .story-badge {
+            padding: 3px 12px;
+            border-radius: 999px;
+            background: rgba(219, 39, 119, 0.12);
+            color: var(--rose-primary);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .figure {
+            color: var(--magenta);
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .story-sub {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* Chapter Content */
+        .content-wrap {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 24px 24px 72px;
+        }
+
+        .content-section {
+            scroll-margin-top: 95px;
+            margin: 28px 0;
+            padding: clamp(24px, 4vw, 44px);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--white);
+            box-shadow: 0 8px 28px rgba(157, 23, 77, 0.05);
+        }
+
+        .chapter-tag {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 14px;
+            border-radius: 999px;
+            background: var(--blush);
+            color: var(--rose-primary);
+            font-size: 12.5px;
+            font-weight: 700;
+        }
+
+        .content-section h1 {
+            margin: 0 0 22px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--line);
+            color: var(--magenta);
+            font-size: clamp(22px, 3.5vw, 30px);
+            line-height: 1.4;
+        }
+
+        .content-section h2 {
+            margin: 32px 0 14px;
+            color: var(--rose-primary);
+            font-size: clamp(18px, 2.5vw, 22px);
+        }
+
+        .content-section p {
+            color: var(--ink);
+            font-size: 16px;
+            line-height: 1.98;
+        }
+
+        /* Highlighted Verbs inside text */
+        .verb-hl {
+            display: inline-block;
+            padding: 0 6px;
+            margin: 0 1px;
+            border-radius: 6px;
+            background: var(--blush);
+            color: var(--rose-primary);
+            font-weight: 700;
+            border-bottom: 2px solid var(--rose-bright);
+        }
+
+        /* Definitions Grid */
+        .def-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin: 18px 0 28px;
+        }
+
+        .def-grid.two-col {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .def-card {
+            padding: 20px;
+            border-radius: 15px;
+            background: #fdf2f8;
+            border: 1px solid var(--rose-light);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .def-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(219, 39, 119, 0.08);
+        }
+
+        .def-card h4 {
+            margin: 0 0 8px;
+            color: var(--magenta);
+            font-size: 16.5px;
+        }
+
+        .def-card p {
+            margin: 0 0 10px;
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .example-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .pill {
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: var(--white);
+            border: 1px solid var(--rose-light);
+            color: var(--rose-primary);
+            font-size: 13.5px;
+            font-weight: 600;
+        }
+
+        /* Story & Reading Cards */
+        .story-card {
+            scroll-margin-top: 100px;
+            margin: 28px 0;
+            padding: 24px 28px;
+            border-radius: 16px;
+            background: linear-gradient(160deg, #fff5fa, #fce7f3);
+            border: 1px solid var(--rose-light);
+            box-shadow: 0 6px 20px rgba(157, 23, 77, 0.05);
+        }
+
+        .story-label {
+            display: inline-block;
+            padding: 4px 13px;
+            border-radius: 999px;
+            background: var(--rose-primary);
+            color: var(--white);
+            font-size: 14.5px;
+            font-weight: 700;
+        }
+
+        .story-card h3 {
+            margin: 12px 0 12px;
+            color: var(--magenta);
+            font-size: 20px;
+        }
+
+        .illustration-banner {
+            margin: 18px 0;
+            padding: 16px;
+            border-radius: 14px;
+            background: var(--white);
+            border: 1px dashed var(--rose-bright);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Formula & Breakdown Grid */
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin: 16px 0 26px;
+        }
+
+        .case-grid.three-col {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .case-card {
+            padding: 18px 20px;
+            border-radius: 14px;
+            background: var(--white);
+            border: 1px solid var(--rose-light);
+            box-shadow: 0 4px 14px rgba(157, 23, 77, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(219, 39, 119, 0.11);
+            background: #fff8fc;
+        }
+
+        .case-card h4 {
+            margin: 0 0 8px;
+            color: var(--rose-primary);
+            font-size: 16px;
+        }
+
+        .case-card p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .formula-badge {
+            display: inline-block;
+            margin-bottom: 8px;
+            padding: 4px 12px;
+            border-radius: 8px;
+            background: var(--blush);
+            color: var(--magenta);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* Poem / Summary Verse Box */
+        .poem {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 480px;
+            margin: 24px auto;
+            padding: 24px 28px;
+            border-radius: 16px;
+            background: #fdf2f8;
+            border: 1px solid var(--rose-light);
+            box-shadow: 0 6px 18px rgba(219, 39, 119, 0.06);
+        }
+
+        .poem h4 {
+            margin: 0 0 12px;
+            color: var(--magenta);
+            font-size: 17px;
+        }
+
+        .poem ul {
+            margin: 0;
+            padding-left: 20px;
+            color: var(--ink);
+        }
+
+        .poem li {
+            margin-bottom: 8px;
+        }
+
+        /* Key Takeaways (.main) */
+        .main {
+            margin: 26px 0 4px;
+            padding: 20px 24px;
+            border: 1px solid var(--rose-light);
+            border-left: 5px solid var(--rose-primary);
+            border-radius: 14px;
+            background: var(--blush);
+            color: var(--berry-dark);
+            font-size: 15.5px;
+            line-height: 1.9;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
+        }
+
+        .main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(219, 39, 119, 0.1);
+            border-left-color: var(--magenta);
+        }
+
+        .Main {
+            margin: 0 0 10px;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--magenta);
+        }
+
+        .main ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .main li {
+            margin-bottom: 6px;
+        }
+
+        /* Quiz Section */
+        .quiz-section {
+            background: linear-gradient(145deg, #ffffff, #fce7f3);
+        }
+
+        .quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .quiz-card {
+            min-width: 0;
+            margin: 0;
+            padding: 20px;
+            border: 1px solid var(--rose-light);
+            border-radius: 14px;
+            background: var(--white);
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .quiz-card.correct {
+            border-color: #16a34a;
+            background: #f0fdf4;
+        }
+
+        .quiz-card.incorrect {
+            border-color: #e11d48;
+            background: #fff1f2;
+        }
+
+        .quiz-card legend {
+            padding: 0 6px;
+            color: var(--magenta);
+            font-size: 15.5px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .quiz-card label {
+            display: block;
+            margin: 10px 0 0;
+            color: var(--ink);
+            font-size: 14.5px;
+            line-height: 1.65;
+            cursor: pointer;
+        }
+
+        .quiz-card input {
+            margin-right: 8px;
+            accent-color: var(--rose-primary);
+        }
+
+        .quiz-actions {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 6px;
+        }
+
+        .reset-button {
+            min-height: 46px;
+            padding: 10px 22px;
+            border: 1px solid var(--rose-light);
+            border-radius: 999px;
+            color: var(--magenta);
+            background: var(--white);
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .reset-button:hover {
+            background: var(--blush);
+        }
+
+        .quiz-result {
+            flex-basis: 100%;
+            margin: 6px 0 0;
+            color: var(--magenta);
+            font-size: 15.5px;
+            font-weight: 700;
+        }
+
+        /* About Creators */
+        .creator-card {
+            margin: 28px 0;
+            padding: clamp(24px, 4vw, 40px);
+            border-radius: var(--radius);
+            background: var(--white);
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 28px rgba(157, 23, 77, 0.05);
+        }
+
+        .creator-card h1 {
+            margin: 0 0 20px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--line);
+            color: var(--magenta);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(22px, 3.5vw, 28px);
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .creator {
+            margin: 0;
+            padding: 22px;
+            border-radius: 16px;
+            background: linear-gradient(160deg, #fdf2f8, #fce7f3);
+            border: 1px solid var(--rose-light);
+            box-shadow: 0 6px 20px rgba(157, 23, 77, 0.04);
+            font-size: 14.5px;
+            line-height: 1.85;
+        }
+
+        .mem-wrap {
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 14px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--rose-primary);
+            background: var(--white);
+            display: grid;
+            place-items: center;
+        }
+
+        .mem {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .underline-text {
+            text-decoration: underline;
+            text-decoration-color: var(--rose-bright);
+            text-underline-offset: 3px;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 38px 20px;
+            color: #fce7f3;
+            background: var(--berry-dark);
+            text-align: center;
+            border-top: 1px solid rgba(244, 114, 182, 0.25);
+        }
+
+        .code {
+            display: grid;
+            place-items: center;
+            margin: 0 auto 16px;
+            width: 116px;
+            height: 116px;
+            padding: 8px;
+            border-radius: 16px;
+            background: var(--white);
+            border: 2px solid var(--rose-bright);
+            overflow: hidden;
+        }
+
+        .code img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .site-footer p {
+            margin: 0 0 6px;
+            font-size: 13.5px;
+        }
+
+        .site-footer small {
+            color: var(--rose-light);
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .back-top {
+            display: inline-block;
+            margin-bottom: 14px;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background: rgba(244, 114, 182, 0.18);
+            color: var(--rose-light);
+            font-size: 13.5px;
+            font-weight: 700;
+            transition: background 0.2s ease;
+        }
+
+        .back-top:hover {
+            background: rgba(244, 114, 182, 0.3);
+        }
+
+        .school {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 10px 18px;
+            color: var(--magenta);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            align-items: left;
+        }
+
+        .schl {
+            display: grid;
+            place-items: center;
+            width: 100px;
+            height: 100px;
+            border: 3.5px solid var(--rose-primary);
+            border-radius: 50%;
+            background: var(--white);
+            color: var(--magenta);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .schl img {
+            width: 108%;
+            height: 108%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .marvel {
+            display: flex;
+            gap: 270px;
+        }
+
+        /* Animations & Responsive Design */
+        @keyframes menu-in {
+            from {
+                opacity: 0;
+                transform: translate(-50%, 6px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .container,
+            .def-grid,
+            .case-grid.three-col,
+            .about {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 680px) {
+            .site-nav {
+                min-height: 64px;
+                padding: 10px 16px;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: calc(100% + 1px);
+                left: 0;
+                right: 0;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px 18px 16px;
+                background: #500724;
+                border-top: 1px solid rgba(251, 207, 232, 0.16);
+                box-shadow: 0 15px 25px rgba(80, 7, 36, 0.35);
+            }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+            }
+            .nav-links > li > a {
+                padding: 11px 8px;
+            }
+            .dropdown-menu {
+                position: static;
+                display: block;
+                transform: none;
+                min-width: 0;
+                margin: 0 0 8px 12px;
+                box-shadow: none;
+                background: #701a3c;
+            }
+            .hero {
+                min-height: 430px;
+                padding: 58px 20px 84px;
+            }
+            .credit {
+                right: 16px;
+                left: 16px;
+                text-align: center;
+            }
+            .container,
+            .def-grid,
+            .def-grid.two-col,
+            .case-grid,
+            .case-grid.three-col,
+            .quiz-grid,
+            .about {
+                grid-template-columns: 1fr;
+            }
+            .content-wrap {
+                padding: 14px 14px 50px;
+            }
+            .content-section,
+            .creator-card {
+                margin: 18px 0;
+                padding: 22px 18px;
+            }
+            .story-card {
+                padding: 20px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Header Navigation -->
+    <nav id="myHeader" class="site-nav">
+        <a class="brand" href="#box" aria-label="မြန်မာသဒ္ဒါ အပိုင်း ၂">
+            <span class="brand-icon">📚</span>
+            <span class="brand-name">မြန်မာသဒ္ဒါ<span> / အပိုင်း ၂</span></span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Open navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <ul id="mainNav" class="nav-links">
+            <li><a href="#school-strip">Home</a></li>
+            <li class="dropdown">
+                <a href="#heading">Explanation ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#section-four-one">၂၀၊ ၁။ ကြိယာ</a></li>
+                    <li><a href="#section-four-two">၂၀၊ ၂။ နာမ်ပေါင်းကြိယာ</a></li>
+                    <li><a href="#section-four-three">၂၀၊ ၃။ ကြိယာထောက်</a></li>
+                </ul>
+            </li>
+            <li><a href="#stories">Examples</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#about">About Creators</a></li>
+        </ul>
+    </nav>
+
+    <!-- School Strip -->
+    <div class="school-strip" id="school-strip">
+        <div class="school-mark" aria-hidden="true">
+            <img src="/Users/elsa/မောင်ဘုန်းမင်းမြတ်/picture/wisdom villa.jpeg" alt="Wisdom Villa Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<svg width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#db2777\' stroke-width=\'2\'><path d=\'M12 2L2 7l10 5 10-5-10-5z\'/><path d=\'M2 17l10 5 10-5\'/><path d=\'M2 12l10 5 10-5\'/></svg>';">
+        </div>
+        <span>Wisdom Villa Private High School</span>
+        <div class="school-mark" aria-hidden="true">
+            <img src="/Users/elsa/မောင်ဘုန်းမင်းမြတ်/picture/logo.jpeg" alt="logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<svg width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#db2777\' stroke-width=\'2\'><path d=\'M12 2L2 7l10 5 10-5-10-5z\'/><path d=\'M2 17l10 5 10-5\'/><path d=\'M2 12l10 5 10-5\'/></svg>';">
+        </div>
+    </div>
+
+    <!-- Hero Banner -->
+    <header class="hero" id="box">
+        <div class="hero-glow"></div>
+        <canvas id="petalCanvas" aria-hidden="true"></canvas>
+        <div class="hero-content">
+            <h4 class="texter">National Digital Award 2026 (Educational Project & Skills Competition)</h4>
+            <span class="eyebrow">ဆဋ္ဌမတန်း မြန်မာ · အပိုင်း ၂ · အခန်း (၂၀)</span>
+            <h1 class="hero-title" id="heroTitle">ကြိယာအစု</h1>
+            <p>မြန်မာသဒ္ဒါ ဝါစင်္ဂ (၈) မျိုးအနက် ပြုခြင်း၊ ဖြစ်ခြင်း၊ ရှိခြင်းကို ဖော်ပြသော ကြိယာအစုကို စနစ်တကျ လေ့လာခြင်း</p>
+            <div class="hero-cta-group">
+                <a class="hero-button" href="#heading">သင်ခန်းစာ စတင်လေ့လာရန် <span aria-hidden="true">↓</span></a>
+                <a class="hero-button secondary" href="#quiz">ဉာဏ်စမ်းဖြေဆိုရန်</a>
+            </div>
+        </div>
+        <p class="credit">Created by <strong>Bhone Min Myat, Su Yati Maung &amp; Thet Hmue Maung</strong></p>
+    </header>
+
+    <!-- Quick Navigation Cards -->
+    <section class="figure-index" id="stories" aria-labelledby="figure-index-title">
+        <div class="section-kicker">QUICK NAVIGATION</div>
+        <h2 id="figure-index-title">ကြိယာအစု ခေါင်းစဉ်ခွဲများ</h2>
+        <p class="section-intro">အောက်ပါခေါင်းစဉ်များကို နှိပ်၍ သက်ဆိုင်ရာ သဒ္ဒါသင်ခန်းစာနှင့် ဥပမာများကို တိုက်ရိုက်လေ့လာနိုင်ပါသည်</p>
+        <div class="container">
+            <a href="#section-four-one" class="Box">
+                <span class="story-badge">အပိုင်း (၂၀၊ ၁)</span>
+                <span class="figure">၂၀၊ ၁။ ကြိယာ</span>
+                <span class="story-sub">ပြုခြင်း၊ ဖြစ်ခြင်း၊ ရှိခြင်းပြ စကားလုံးများ</span>
+            </a>
+            <a href="#section-four-two" class="Box">
+                <span class="story-badge">အပိုင်း (၂၀၊ ၂)</span>
+                <span class="figure">၂၀၊ ၂။ နာမ်ပေါင်းကြိယာ</span>
+                <span class="story-sub">နာမ်နှင့် ကြိယာ ပေါင်းစပ်ထားသော ကြိယာများ</span>
+            </a>
+            <a href="#section-four-three" class="Box">
+                <span class="story-badge">အပိုင်း (၂၀၊ ၃)</span>
+                <span class="figure">၂၀၊ ၃။ ကြိယာထောက်</span>
+                <span class="story-sub">ကြိယာနောက်မှ ထောက်ကူပေးသော စကားလုံးများ</span>
+            </a>
+        </div>
+    </section>
+
+    <main class="content-wrap" id="heading">
+
+        <!-- Section 20.1: ကြိယာ -->
+        <section class="content-section" id="section-four-one">
+            <span class="chapter-tag">အခန်း (၂၀) · မြန်မာသဒ္ဒါ</span>
+            <h1>၂၀၊ ၁။ ကြိယာ</h1>
+
+            <article class="story-card" id="story-one">
+                <span class="story-label">စာဖတ်ခန်းဥပမာ (၁)</span>
+                <h3>မေတ္တာရွှေစောင်းနှင့် ဦးဘမောင်</h3>
+                <p>
+                    ဦးဘမောင်သည် သူ့အိမ် ဧည့်ခန်း<span class="verb-hl">ရှိ</span> စင်မြင့်ပေါ်တွင် တင်ထားသော စောင်းကောက်ကို <span class="verb-hl">ကြည့်</span>ရင်း <span class="verb-hl">ပြုံး</span>လိုက်သည်။ ထိုစောင်းကောက်သည် သူ့ဘဝအတွက် အမှတ်ရစရာ တစ်ခု<span class="verb-hl">ဖြစ်</span>သည်။ အနုပညာဗီဇရှိသော ဦးဘမောင်တို့ ညီအစ်ကိုတစ်စုသည် စောင်းတီးသူက<span class="verb-hl">တီး</span>၊ စည်းဝါးလိုက်သူက<span class="verb-hl">လိုက်</span>၊ သီချင်းဆိုသူက<span class="verb-hl">ဆို</span>နှင့် ဤဧည့်ခန်းတွင် ဂီတသံများ <span class="verb-hl">စည်ပင်</span>ခဲ့သည်။ “မြွေမ<span class="verb-hl">သက်</span> ငှက်လဲ မ<span class="verb-hl">ဟုတ်</span>ပါ၊ ရင်မှာ<span class="verb-hl">ထား</span> သားလဲမ<span class="verb-hl">ဟုတ်</span>ပါ” ဟူသော မေတ္တာရွှေစောင်းသီချင်းကို <span class="verb-hl">ဆို</span>ရင်း စောင်းကို ညင်ညင်သာသာ <span class="verb-hl">တီးခတ်</span>နေသော အစ်ကိုကြီးကို <span class="verb-hl">မြင်ယောင်</span>မိသည်။ စည်းဝါးကို <span class="verb-hl">ကိုင်ထား</span>ရင်း <span class="verb-hl">ငြိမ်</span>နေတတ်သော ဦးဘမောင်ကို “ဟေ့ ဘမောင်၊ ဝါး<span class="verb-hl">ချ</span>လေကွာ။ ငါက ဘယ်လို<span class="verb-hl">စ</span>ရမလဲ” ဟု မယ်ဒလင်ကြိုးကို <span class="verb-hl">ညှိ</span>ရင်း <span class="verb-hl">ပြော</span>တတ်သော အစ်ကိုလတ်ကို <span class="verb-hl">တမ်းတ</span>မိသည်။ ယခုတော့ ထိုသူများအားလုံး အနယ်နယ် အရပ်ရပ်တွင် တာဝန်<span class="verb-hl">ထမ်း</span>နေကြလေပြီ။ ဤဧည့်ခန်းထဲတွင် ဦးဘမောင်နှင့် သူတို့ညီအစ်ကိုတစ်သိုက် နာမည်<span class="verb-hl">ပေး</span>ခဲ့သော မေတ္တာရွှေစောင်းသာ <span class="verb-hl">ကျန်</span>တော့သည်။ ဦးဘမောင်သည် စောင်းကြိုးများကို လက်ဖြင့်<span class="verb-hl">ထိတို့</span>လိုက်ရင်း အဝေးသို့ <span class="verb-hl">ငေး</span>နေလေသည်။
+                </p>
+                <div class="illustration-banner" aria-label="မြန်မာ့စောင်းကောက် သင်္ကေတ">
+                    <svg width="72" height="72" viewBox="0 0 100 100" fill="none">
+                        <path d="M22 76C18 60 28 45 48 45C68 45 78 30 70 14C66 8 58 10 62 18C68 28 58 38 44 38C22 38 10 56 16 78C19 88 34 90 42 84L22 76Z" fill="#db2777"/>
+                        <line x1="65" y1="20" x2="32" y2="74" stroke="#f472b6" stroke-width="2"/>
+                        <line x1="67" y1="26" x2="38" y2="76" stroke="#f472b6" stroke-width="2"/>
+                        <line x1="68" y1="32" x2="44" y2="78" stroke="#f472b6" stroke-width="2"/>
+                    </svg>
+                    <div>
+                        <strong style="color: var(--magenta); display: block; font-size: 15.5px;">အထက်ပါစာပိုဒ်မှ ကြိယာများကို လေ့လာခြင်း</strong>
+                        <span style="color: var(--muted); font-size: 14px;">ပန်းရောင်ဖြင့် ဖော်ပြထားသော စကားလုံးများသည် ပြုခြင်း၊ ဖြစ်ခြင်း၊ ရှိခြင်းကို ပြသော ကြိယာများ ဖြစ်ကြသည်။</span>
+                    </div>
+                </div>
+            </article>
+
+            <h2>ကြိယာ၏ အဓိပ္ပာယ်နှင့် အမျိုးအစား (၃) မျိုး</h2>
+            <p>
+                <strong>ကြိယာ</strong> ဆိုသည်မှာ သက်ရှိသက်မဲ့တို့၏ <strong>ပြုခြင်း၊ ဖြစ်ခြင်း၊ ရှိခြင်း</strong> တစ်ခုခုကို ဖော်ပြသော စကားလုံးဖြစ်သည်။ အောက်ပါအတိုင်း (၃) မျိုး ခွဲခြားလေ့လာနိုင်ပါသည်။
+            </p>
+
+            <div class="def-grid">
+                <div class="def-card">
+                    <h4>🌸 ၁။ ပြုခြင်းပြကြိယာ</h4>
+                    <p>
+                        လူ၊ တိရစ္ဆာန် စသည်တို့၏ လှုပ်ရှားဆောင်ရွက် ပြုမူခြင်းကို ဖော်ပြသော ကြိယာဖြစ်သည်။
+                    </p>
+                    <div class="example-pills">
+                        <span class="pill">ကြည့်</span>
+                        <span class="pill">ပြုံး</span>
+                        <span class="pill">တီး</span>
+                        <span class="pill">ဆို</span>
+                        <span class="pill">ရေး</span>
+                        <span class="pill">သွား</span>
+                    </div>
+                </div>
+                <div class="def-card">
+                    <h4>🌷 ၂။ ဖြစ်ခြင်းပြကြိယာ</h4>
+                    <p>
+                        အခြေအနေတစ်ခုခုသို့ ပြောင်းလဲရောက်ရှိခြင်း၊ ဖြစ်ပေါ်ခြင်းကို ဖော်ပြသော ကြိယာဖြစ်သည်။
+                    </p>
+                    <div class="example-pills">
+                        <span class="pill">ဖြစ်</span>
+                        <span class="pill">စည်ပင်</span>
+                        <span class="pill">ကြီးပြင်း</span>
+                        <span class="pill">ပွင့်</span>
+                        <span class="pill">ဟုတ်</span>
+                    </div>
+                </div>
+                <div class="def-card">
+                    <h4>🌺 ၃။ ရှိခြင်းပြကြိယာ</h4>
+                    <p>
+                        တစ်နေရာရာတွင် တည်ရှိနေခြင်း၊ ပိုင်ဆိုင်ရှိနေခြင်းကို ဖော်ပြသော ကြိယာဖြစ်သည်။
+                    </p>
+                    <div class="example-pills">
+                        <span class="pill">ရှိ</span>
+                        <span class="pill">ကျန်</span>
+                        <span class="pill">တည်</span>
+                        <span class="pill">နေ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main">
+                <p class="Main">အဓိကမှတ်သားရန် (၂၀၊ ၁)</p>
+                <ul>
+                    <li>ပြုခြင်း၊ ဖြစ်ခြင်း၊ ရှိခြင်း တစ်ခုခုကို ဖော်ပြသော စကားလုံးကို <strong>ကြိယာ</strong> ဟုခေါ်သည်။</li>
+                    <li>ဝါကျတစ်ကြောင်း ပြည့်စုံစေရန် ကြိယာသည် အဓိကကျသော ဝါစင်္ဂတစ်ခုဖြစ်သည်။</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 20.2: နာမ်ပေါင်းကြိယာ -->
+        <section class="content-section" id="section-four-two">
+            <span class="chapter-tag">အခန်း (၂၀) · အပိုင်း (၂)</span>
+            <h1>၂၀၊ ၂။ နာမ်ပေါင်းကြိယာ</h1>
+            <p>
+                <strong>နာမ်ပေါင်းကြိယာ</strong> ဆိုသည်မှာ <strong>နာမ်ပုဒ်တစ်ခုနှင့် ကြိယာပုဒ်တစ်ခုတို့ ပေါင်းစပ်၍ ကြိယာအနက်အဓိပ္ပာယ် တစ်ခုတည်းကိုသာ ဖော်ပြသော စကားလုံး</strong> ဖြစ်သည်။ နာမ်နှင့်ကြိယာကို ခွဲထုတ်လိုက်ပါက မူလဆိုလိုရင်း ကြိယာအနက် မပြည့်စုံတော့ဘဲ ပေါင်းစပ်လိုက်မှသာ အနက်တစ်ခုတည်း ထွက်ပေါ်လာသည်။
+            </p>
+
+            <article class="story-card" id="story-two">
+                <span class="story-label">စာဖတ်ခန်းဥပမာ (၂)</span>
+                <h3>ကျောင်းသားကောင်း မောင်သုတ</h3>
+                <p>
+                    မောင်သုတသည် နံနက်စောစော အိပ်ရာမှနိုးသည်နှင့် မျက်နှာသစ်၊ <span class="verb-hl">ရေချိုး</span>ပြီးလျှင် မိခင်ပြင်ဆင်ပေးသော မနက်စာကို <span class="verb-hl">ထမင်းစား</span>သည်။ ထို့နောက် ကျောင်းသင်ခန်းစာများကို စိတ်ဝင်တစား <span class="verb-hl">စာဖတ်</span>လေ့ကျင့်သည်။ ကျောင်းသို့ရောက်သောအခါ ဆရာမသင်ကြားသည်များကို အထူး <span class="verb-hl">ဂရုစိုက်</span> နားထောင်သည်။ သူငယ်ချင်းများနှင့် ကစားရာတွင်လည်း တစ်ဦးနှင့်တစ်ဦး <span class="verb-hl">စိတ်ဆိုး</span>ခြင်းမရှိဘဲ ချစ်ခင်စွာ နေထိုင်သည်။ ညအိပ်ရာဝင်သောအခါ ပျော်ရွှင်ဖွယ်ရာ အနာဂတ်ကို <span class="verb-hl">အိပ်မက်မက်</span>ရင်း အိပ်စက်လေသည်။
+                </p>
+            </article>
+
+            <h2>နာမ်ပေါင်းကြိယာ ဖွဲ့စည်းပုံ ဥပမာများ</h2>
+            <div class="case-grid three-col">
+                <div class="case-card">
+                    <span class="formula-badge">နာမ် + ကြိယာ = နာမ်ပေါင်းကြိယာ</span>
+                    <h4>၁။ စာ (နာမ်) + ဖတ် (ကြိယာ)</h4>
+                    <p>
+                        <strong>စာဖတ်</strong> — စာအုပ်စာပေ ဖတ်ရှုခြင်းဟူသော ကြိယာအနက်တစ်ခုတည်းကို ပြသည်။ (ဥပမာ- မောင်မောင် <strong>စာဖတ်</strong>နေသည်။)
+                    </p>
+                </div>
+                <div class="case-card">
+                    <span class="formula-badge">နာမ် + ကြိယာ = နာမ်ပေါင်းကြိယာ</span>
+                    <h4>၂။ ရေ (နာမ်) + ချိုး (ကြိယာ)</h4>
+                    <p>
+                        <strong>ရေချိုး</strong> — ကိုယ်လက်သန့်စင်အောင် ရေလောင်းဆေးကြောခြင်း ကြိယာအနက်ကို ပြသည်။ (ဥပမာ- ညနေခင်းတွင် <strong>ရေချိုး</strong>သည်။)
+                    </p>
+                </div>
+                <div class="case-card">
+                    <span class="formula-badge">နာမ် + ကြိယာ = နာမ်ပေါင်းကြိယာ</span>
+                    <h4>၃။ စိတ် (နာမ်) + ဆိုး (ကြိယာ)</h4>
+                    <p>
+                        <strong>စိတ်ဆိုး</strong> — အမျက်ထွက်ခြင်း၊ မကျေနပ်ခြင်းဟူသော ကြိယာအနက်တစ်ခုတည်းကို ပြသည်။ (ဥပမာ- သူငယ်ချင်းကို မ<strong>စိတ်ဆိုး</strong>ပါနှင့်။)
+                    </p>
+                </div>
+                <div class="case-card">
+                    <span class="formula-badge">နာမ် + ကြိယာ = နာမ်ပေါင်းကြိယာ</span>
+                    <h4>၄။ ထမင်း (နာမ်) + စား (ကြိယာ)</h4>
+                    <p>
+                        <strong>ထမင်းစား</strong> — အစာအာဟာရ သုံးဆောင်ခြင်းဟူသော ကြိယာအနက်ကို ပြသည်။ (ဥပမာ- မိသားစုစုံညီ <strong>ထမင်းစား</strong>ကြသည်။)
+                    </p>
+                </div>
+                <div class="case-card">
+                    <span class="formula-badge">နာမ် + ကြိယာ = နာမ်ပေါင်းကြိယာ</span>
+                    <h4>၅။ အိပ်မက် (နာမ်) + မက် (ကြိယာ)</h4>
+                    <p>
+                        <strong>အိပ်မက်မက်</strong> — အိပ်ပျော်နေစဉ် အာရုံထင်မြင်ခြင်း ကြိယာအနက်ကို ပြသည်။ (ဥပမာ- ညက လှပသော <strong>အိပ်မက်မက်</strong>သည်။)
+                    </p>
+                </div>
+                <div class="case-card">
+                    <span class="formula-badge">နာမ် + ကြိယာ = နာမ်ပေါင်းကြိယာ</span>
+                    <h4>၆။ ဂရု (နာမ်) + စိုက် (ကြိယာ)</h4>
+                    <p>
+                        <strong>ဂရုစိုက်</strong> — အလေးထား အာရုံပြုခြင်းဟူသော ကြိယာအနက်ကို ပြသည်။ (ဥပမာ- ကျန်းမာရေးကို <strong>ဂရုစိုက်</strong>ပါ။)
+                    </p>
+                </div>
+            </div>
+
+            <div class="main">
+                <p class="Main">အဓိကမှတ်သားရန် (၂၀၊ ၂)</p>
+                <ul>
+                    <li>နာမ်နှင့် ကြိယာ ပေါင်းစပ်ထားသော်လည်း <strong>ကြိယာအနက်တစ်ခုတည်း</strong> ကိုသာ ဖော်ပြလျှင် <strong>နာမ်ပေါင်းကြိယာ</strong> ဖြစ်သည်။</li>
+                    <li>အခြားဥပမာများ — လမ်းလျှောက်၊ အလုပ်လုပ်၊ စကားပြော၊ နားထောင်၊ သတိရ၊ ကျေးဇူးတင်။</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 20.3: ကြိယာထောက် -->
+        <section class="content-section" id="section-four-three">
+            <span class="chapter-tag">အခန်း (၂၀) · အပိုင်း (၃)</span>
+            <h1>၂၀၊ ၃။ ကြိယာထောက်</h1>
+            <p>
+                <strong>ကြိယာထောက်</strong> ဆိုသည်မှာ <strong>ပင်ကိုကြိယာ၏ အနက်အဓိပ္ပာယ်ကို ပိုမိုပေါ်လွင်ထင်ရှားစေရန် ကြိယာ၏နောက်မှ ထောက်ကူပေးသော စကားလုံး</strong> ဖြစ်သည်။ ကြိယာထောက်သည် တစ်လုံးတည်း သီးခြားရပ်တည်လေ့မရှိဘဲ အဓိကကြိယာနောက်တွင် ကပ်လျက်လိုက်ပါ၍ ကာလ၊ ဆန္ဒ၊ စွမ်းရည်၊ ဖြစ်မြဲသဘော စသည်တို့ကို ဖြည့်စွက်ပေးသည်။
+            </p>
+
+            <article class="story-card" id="story-three">
+                <span class="story-label">စာဖတ်ခန်းဥပမာ (၃)</span>
+                <h3>ပုဂံရှေးဟောင်းမြို့တော် ခရီးစဉ်</h3>
+                <p>
+                    ကျွန်ုပ်တို့ မိသားစုသည် လာမည့်ကျောင်းပိတ်ရက်တွင် ပုဂံရှေးဟောင်းမြို့တော်သို့ သွား<span class="verb-hl">ချင်</span>ကြသည်။ ယခင်နှစ်ကလည်း မန္တလေးမြို့သို့ ရောက်<span class="verb-hl">ခဲ့</span>ဖူးသည်။ ပုဂံမြို့ရှိ စေတီပုထိုးများ၏ အနုပညာလက်ရာများကို ကိုယ်တိုင် လေ့လာ<span class="verb-hl">နိုင်</span>မည်ဖြစ်၍ အလွန်ဝမ်းသာ<span class="verb-hl">နေ</span>မိသည်။ ခရီးစဉ်အတွင်း ဗဟုသုတများစွာ ရရှိ<span class="verb-hl">လိမ့်</span>မည်ဟု မျှော်လင့်မိသည်။ သင်ခန်းစာများကို ကြိုတင်လေ့လာ<span class="verb-hl">ပြီး</span>မှသာ ခရီးထွက်<span class="verb-hl">ရ</span>မည် ဖြစ်ပါသည်။
+                </p>
+            </article>
+
+            <h2>ကြိယာထောက် စကားလုံးများနှင့် အသုံးပြုပုံ</h2>
+            <div class="def-grid two-col">
+                <div class="def-card">
+                    <h4>✨ ဆန္ဒနှင့် စွမ်းရည်ပြ ကြိယာထောက်များ</h4>
+                    <p>
+                        <strong>ချင်</strong> (ဆန္ဒရှိခြင်း)၊ <strong>နိုင်</strong> (စွမ်းဆောင်နိုင်ခြင်း)၊ <strong>တတ်</strong> (ကျွမ်းကျင်ခြင်း/အလေ့ရှိခြင်း)
+                    </p>
+                    <div class="example-pills">
+                        <span class="pill">သွား + ချင် + သည်</span>
+                        <span class="pill">စား + နိုင် + သည်</span>
+                        <span class="pill">ရေး + တတ် + သည်</span>
+                    </div>
+                </div>
+                <div class="def-card">
+                    <h4>⏳ ကာလနှင့် အခြေအနေပြ ကြိယာထောက်များ</h4>
+                    <p>
+                        <strong>ခဲ့</strong> (အတိတ်ကာလ)၊ <strong>နေ</strong> (ပစ္စုပ္ပန်ပြုဆဲ)၊ <strong>လိမ့်</strong> (အနာဂတ်ခန့်မှန်း)၊ <strong>ပြီး / ဖူး / ရ</strong>
+                    </p>
+                    <div class="example-pills">
+                        <span class="pill">ရေး + ခဲ့ + သည်</span>
+                        <span class="pill">ဖတ် + နေ + သည်</span>
+                        <span class="pill">လာ + လိမ့် + မည်</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poem">
+                <h4>🌸 ကြိယာအစု မှတ်စုလင်္ကာ</h4>
+                <ul>
+                    <li>ပြု၊ ဖြစ်၊ ရှိ ဟူ၊ အနက်ယူ၊ မှတ်မူ <strong>ကြိယာ</strong> မည်။</li>
+                    <li>နာမ်နှင့်ကြိယာ၊ ပေါင်းစပ်လာ၊ <strong>နာမ်ပေါင်းကြိယာ</strong> တည်း။</li>
+                    <li>ကြိယာနောက်မှ၊ ထောက်ကူမ၊ <strong>ကြိယာထောက်</strong> ဟုခေါ်သည်။</li>
+                </ul>
+            </div>
+
+            <div class="main" id="main-three">
+                <p class="Main">အဓိကမှတ်သားရန် (၂၀၊ ၃)</p>
+                <ul>
+                    <li>ကြိယာ၏ အနက်အဓိပ္ပာယ်ကို ပိုမိုပေါ်လွင်စေရန် ကြိယာနောက်မှ ထောက်ကူပေးသော စကားလုံးကို <strong>ကြိယာထောက်</strong> ဟုခေါ်သည်။</li>
+                    <li>ထင်ရှားသော ကြိယာထောက်များ — <strong>ချင်၊ နိုင်၊ ခဲ့၊ လိမ့်၊ နေ၊ ပြီး၊ တတ်၊ ဖူး၊ ရ၊ အပ်၊ သင့်</strong>။</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Interactive Chapter Quiz -->
+        <section id="quiz" class="quiz-section content-section">
+            <div class="section-kicker">TEST YOUR KNOWLEDGE</div>
+            <h2>ကြိယာအစု ဉာဏ်စမ်းမေးခွန်းများ</h2>
+            <p class="section-intro">မေးခွန်းတစ်ခုချင်းစီအတွက် အဖြေမှန်ကို ရွေးချယ်ပြီး ရမှတ်စစ်ဆေးပါ။</p>
+            <form id="quizForm" class="quiz-grid">
+                <fieldset class="quiz-card" data-question="q1">
+                    <legend>၁။ ကြိယာဆိုသည်မှာ အဘယ်နည်း။</legend>
+                    <label><input type="radio" name="q1" value="a"> လူ၊ တိရစ္ဆာန်၊ အရာဝတ္ထုတို့၏ အမည်ကို ခေါ်သော စကားလုံး</label>
+                    <label><input type="radio" name="q1" value="b"> ပြုခြင်း၊ ဖြစ်ခြင်း၊ ရှိခြင်း တစ်ခုခုကို ဖော်ပြသော စကားလုံး</label>
+                    <label><input type="radio" name="q1" value="c"> နာမ်၏ အရည်အချင်းကို အထူးပြုသော စကားလုံး</label>
+                </fieldset>
+
+                <fieldset class="quiz-card" data-question="q2">
+                    <legend>၂။ အောက်ပါတို့အနက် မည်သည့်စကားလုံးသည် "ရှိခြင်းပြကြိယာ" ဖြစ်သနည်း။</legend>
+                    <label><input type="radio" name="q2" value="a"> ပြုံးသည်</label>
+                    <label><input type="radio" name="q2" value="b"> စည်ပင်သည်</label>
+                    <label><input type="radio" name="q2" value="c"> ရှိသည်</label>
+                </fieldset>
+
+                <fieldset class="quiz-card" data-question="q3">
+                    <legend>၃။ နာမ်နှင့် ကြိယာ ပေါင်းစပ်၍ ကြိယာအနက်တစ်ခုတည်းကို ပြသော "နာမ်ပေါင်းကြိယာ" မှာ အဘယ်နည်း။</legend>
+                    <label><input type="radio" name="q3" value="a"> စာဖတ်၊ ရေချိုး၊ စိတ်ဆိုး</label>
+                    <label><input type="radio" name="q3" value="b"> သွားချင်၊ စားနိုင်၊ ရေးခဲ့</label>
+                    <label><input type="radio" name="q3" value="c"> စောင်းကောက်၊ ဧည့်ခန်း၊ သီချင်း</label>
+                </fieldset>
+
+                <fieldset class="quiz-card" data-question="q4">
+                    <legend>၄။ "မောင်မောင် ကျောင်းသို့ သွား<strong>ချင်</strong>သည်" ဟူသော ဝါကျတွင် "ချင်" သည် မည်သည့်သဒ္ဒါအမျိုးအစား ဖြစ်သနည်း။</legend>
+                    <label><input type="radio" name="q4" value="a"> နာမ်ပေါင်းကြိယာ</label>
+                    <label><input type="radio" name="q4" value="b"> ကြိယာထောက်</label>
+                    <label><input type="radio" name="q4" value="c"> နာမဝိသေသန</label>
+                </fieldset>
+
+                <fieldset class="quiz-card" data-question="q5" style="grid-column: 1 / -1;">
+                    <legend>၅။ အောက်ပါတို့အနက် ကြိယာထောက် စကားလုံးများသာ ပါဝင်သော အစုကို ရွေးချယ်ပါ။</legend>
+                    <label><input type="radio" name="q5" value="a"> ချင်၊ နိုင်၊ ခဲ့၊ လိမ့်၊ နေ</label>
+                    <label><input type="radio" name="q5" value="b"> ထမင်းစား၊ လမ်းလျှောက်၊ အိပ်မက်မက်</label>
+                    <label><input type="radio" name="q5" value="c"> ဦးဘမောင်၊ မေတ္တာရွှေစောင်း၊ စည်းဝါး</label>
+                </fieldset>
+
+                <div class="quiz-actions">
+                    <button type="submit" class="hero-button">အဖြေစစ်ဆေးမည်</button>
+                    <button type="reset" class="reset-button" id="resetQuiz">ပြန်လည်ဖြေဆိုမည်</button>
+                    <p id="quizResult" class="quiz-result" role="status" aria-live="polite"></p>
+                </div>
+            </form>
+        </section>
+
+        <!-- About Creators -->
+        <section class="creator-card" id="about">
+            <h1>About Creators</h1>
+            <div class="about">
+                <p class="creator">
+                    <span class="mem-wrap">
+                        <img src="/Users/elsa/မောင်ဘုန်းမင်းမြတ်/picture/leader.jpeg" alt="မောင်ဘုန်းမင်းမြတ်" class="mem" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:36px\'>👦🏻</span>';">
+                    </span>
+                    <strong>အမည်:</strong> <span class="underline-text">မောင်ဘုန်းမင်းမြတ်</span> <br>
+                    <strong>ကျောင်းဝင်အမှတ်:</strong> <span class="underline-text">၀၁၅၅၁ / ၂၆</span> <br>
+                    <strong>မွေးသက္ကရာဇ်:</strong> <span class="underline-text">၁၆. ၁. ၂၀၁၄</span> <br>
+                    <strong>အဖအမည်:</strong> <span class="underline-text">ဦးမျိုးသူနိုင်</span> <br>
+                    <strong>အတန်း:</strong> <span class="underline-text">ဆဋ္ဌမတန်း</span> <br>
+                    <strong>ရာထူး:</strong> <span class="underline-text">အဖွဲ့ခေါင်းဆောင်</span> <br>
+                    <strong>ဆောင်ရွက်မှု:</strong> <span class="underline-text">Presenter</span> <br>
+                    <strong>ကျောင်းအမည်:</strong> <span class="underline-text">ပညာစံအိမ်ကိုယ်ပိုင်အထက်တန်းကျောင်း</span>
+                </p>
+                <p class="creator">
+                    <span class="mem-wrap">
+                        <img src="/Users/elsa/မောင်ဘုန်းမင်းမြတ်/picture/web creator.jpeg" alt="မစုရတီမောင်" class="mem" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:36px\'>👧🏻</span>';">
+                    </span>
+                    <strong>အမည်:</strong> <span class="underline-text">မစုရတီမောင်</span> <br>
+                    <strong>ကျောင်းဝင်အမှတ်:</strong> <span class="underline-text">၀၇၀၉ / ၂၃</span> <br>
+                    <strong>မွေးသက္ကရာဇ်:</strong> <span class="underline-text">၆. ၆. ၂၀၁၂</span> <br>
+                    <strong>အဖအမည်:</strong> <span class="underline-text">ဦးအောင်ဝင်းသူ</span> <br>
+                    <strong>အတန်း:</strong> <span class="underline-text">သတ္တမတန်း</span> <br>
+                    <strong>ရာထူး:</strong> <span class="underline-text">အဖွဲ့ဝင် (၁)</span> <br>
+                    <strong>ဆောင်ရွက်မှု:</strong> <span class="underline-text">Website Creator</span> <br>
+                    <strong>ကျောင်းအမည်:</strong> <span class="underline-text">ပညာစံအိမ်ကိုယ်ပိုင်အထက်တန်းကျောင်း</span>
+                </p>
+                <p class="creator">
+                    <span class="mem-wrap">
+                        <img src="/Users/elsa/မောင်ဘုန်းမင်းမြတ်/picture/presenter.jpeg" alt="မသက်မှူးမောင်" class="mem" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'font-size:36px\'>👧🏻</span>';">
+                    </span>
+                    <strong>အမည်:</strong> <span class="underline-text">မသက်မှူးမောင်</span> <br>
+                    <strong>ကျောင်းဝင်အမှတ်:</strong> <span class="underline-text">၀၁၄၀၆ / ၂၄</span> <br>
+                    <strong>အတန်း:</strong> <span class="underline-text">သတ္တမတန်း</span> <br>
+                    <strong>မွေးသက္ကရာဇ်:</strong> <span class="underline-text">၉. ၁၁. ၂၀၁၂</span> <br>
+                    <strong>အဖအမည်:</strong> <span class="underline-text">ဦးကျော်မိုးထွေး</span> <br>
+                    <strong>ရာထူး:</strong> <span class="underline-text">အဖွဲ့ဝင် (၂)</span> <br>
+                    <strong>ဆောင်ရွက်မှု:</strong> <span class="underline-text">Presenter</span> <br>
+                    <strong>ကျောင်းအမည်:</strong> <span class="underline-text">ပညာစံအိမ်ကိုယ်ပိုင်အထက်တန်းကျောင်း</span>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="marvel">
+            <div class="school">
+                <div class="schl">
+                    <img src="/Users/elsa/ကြိယာအစု/picture/wisdom villa.jpeg" alt="wisdom villa">
+                </div>
+            </div>
+            <div>
+                <a class="back-top" href="#box">↑ အပေါ်သို့ပြန်သွားရန်</a>
+                <p>ဆဋ္ဌမတန်း မြန်မာ · အပိုင်း ၂ · အခန်း (၂၀) — ကြိယာအစု</p>
+                <small>Created by Bhone Min Myat, Su Yati Maung &amp; Thet Hmue Maung · Wisdom Villa Private High School</small>
+            </div>
+            <div class="school">
+                <div class="schl">
+                    <img src="/Users/elsa/ကြိယာအစု/picture/logo.jpeg" alt="logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* Grade 6 Myanmar Grammar — Part 2: Verb Group */
+        (() => {
+            "use strict";
+
+            // 1. Shrink sticky navigation on scroll
+            const header = document.getElementById("myHeader");
+            const updateHeader = () => header?.classList.toggle("small", window.scrollY > 45);
+            window.addEventListener("scroll", updateHeader, { passive: true });
+            updateHeader();
+
+            // 2. Mobile navigation menu toggle
+            const menuToggle = document.getElementById("menuToggle");
+            const mainNav = document.getElementById("mainNav");
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener("click", () => {
+                    const isOpen = mainNav.classList.toggle("open");
+                    menuToggle.setAttribute("aria-expanded", String(isOpen));
+                    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+                });
+
+                mainNav.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", () => {
+                        mainNav.classList.remove("open");
+                        menuToggle.setAttribute("aria-expanded", "false");
+                        menuToggle.setAttribute("aria-label", "Open navigation");
+                    });
+                });
+
+                document.addEventListener("click", event => {
+                    if (!mainNav.contains(event.target) && !menuToggle.contains(event.target)) {
+                        mainNav.classList.remove("open");
+                        menuToggle.setAttribute("aria-expanded", "false");
+                    }
+                });
+            }
+
+            // 3. Verb Group (ကြိယာအစု) Quiz with visual feedback
+            const quizForm = document.getElementById("quizForm");
+            const quizResult = document.getElementById("quizResult");
+            if (quizForm && quizResult) {
+                const answers = { q1: "b", q2: "c", q3: "a", q4: "b", q5: "a" };
+
+                quizForm.addEventListener("submit", event => {
+                    event.preventDefault();
+                    const data = new FormData(quizForm);
+                    const keys = Object.keys(answers);
+                    const unanswered = keys.filter(key => !data.get(key));
+
+                    if (unanswered.length) {
+                        quizResult.style.color = "#e11d48";
+                        quizResult.textContent = `ကျေးဇူးပြု၍ မေးခွန်း (${keys.length}) ခုလုံးကို ဖြေဆိုပြီးမှ အဖြေစစ်ဆေးပါ။`;
+                        return;
+                    }
+
+                    let score = 0;
+                    keys.forEach(key => {
+                        const card = quizForm.querySelector(`[data-question="${key}"]`);
+                        const isRight = data.get(key) === answers[key];
+                        if (isRight) score++;
+                        if (card) {
+                            card.classList.remove("correct", "incorrect");
+                            card.classList.add(isRight ? "correct" : "incorrect");
+                        }
+                    });
+
+                    quizResult.style.color = score >= 4 ? "#15803d" : "#9d174d";
+                    const message =
+                        score === 5 ? "အလွန်ကောင်းမွန်ပါသည်! အားလုံးမှန်ကန်ပါသည်။ 🌸" :
+                        score >= 3 ? "ကောင်းမွန်ပါသည်! သင်ခန်းစာကို ပြန်လည်ဖတ်ရှုပြီး ထပ်မံကြိုးစားကြည့်ပါ။" :
+                        "သင်ခန်းစာကို သေချာပြန်ဖတ်ပြီး ထပ်မံဖြေဆိုကြည့်ပါ။";
+
+                    quizResult.textContent = `သင်၏ရမှတ်မှာ ၅ မှတ်တွင် ${score} မှတ် ဖြစ်ပါသည်။ ${message}`;
+                });
+
+                quizForm.addEventListener("reset", () => {
+                    quizResult.textContent = "";
+                    quizForm.querySelectorAll(".quiz-card").forEach(card => {
+                        card.classList.remove("correct", "incorrect");
+                    });
+                });
+            }
+
+            // 4. Gentle floating pink sakura petals in the hero banner
+            const canvas = document.getElementById("petalCanvas");
+            if (canvas && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                const ctx = canvas.getContext("2d");
+                let width = 0;
+                let height = 0;
+                const petals = [];
+                const PETAL_COUNT = 30;
+                const pinkShades = [
+                    "rgba(251, 207, 232, ",
+                    "rgba(244, 114, 182, ",
+                    "rgba(249, 168, 212, ",
+                    "rgba(253, 242, 248, "
+                ];
+
+                function resizeCanvas() {
+                    const rect = canvas.getBoundingClientRect();
+                    const dpr = window.devicePixelRatio || 1;
+                    width = rect.width;
+                    height = rect.height;
+                    canvas.width = width * dpr;
+                    canvas.height = height * dpr;
+                    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                }
+
+                function createPetal(randomY = true) {
+                    return {
+                        x: Math.random() * width,
+                        y: randomY ? Math.random() * height : -20,
+                        size: 5 + Math.random() * 7,
+                        speedY: 0.45 + Math.random() * 0.75,
+                        speedX: (Math.random() - 0.5) * 0.55,
+                        angle: Math.random() * Math.PI * 2,
+                        spin: (Math.random() - 0.5) * 0.025,
+                        opacity: 0.25 + Math.random() * 0.45,
+                        colorBase: pinkShades[Math.floor(Math.random() * pinkShades.length)]
+                    };
+                }
+
+                resizeCanvas();
+                window.addEventListener("resize", resizeCanvas);
+
+                for (let i = 0; i < PETAL_COUNT; i++) {
+                    petals.push(createPetal(true));
+                }
+
+                function animate() {
+                    ctx.clearRect(0, 0, width, height);
+                    for (const p of petals) {
+                        p.y += p.speedY;
+                        p.x += p.speedX + Math.sin(p.angle) * 0.35;
+                        p.angle += p.spin;
+
+                        if (p.y > height + 20) {
+                            Object.assign(p, createPetal(false));
+                        }
+
+                        ctx.save();
+                        ctx.translate(p.x, p.y);
+                        ctx.rotate(p.angle);
+                        ctx.fillStyle = `${p.colorBase}${p.opacity})`;
+                        // Soft cherry-blossom petal curve
+                        ctx.beginPath();
+                        ctx.moveTo(0, -p.size);
+                        ctx.bezierCurveTo(p.size * 0.8, -p.size * 0.4, p.size * 0.8, p.size * 0.6, 0, p.size);
+                        ctx.bezierCurveTo(-p.size * 0.8, p.size * 0.6, -p.size * 0.8, -p.size * 0.4, 0, -p.size);
+                        ctx.fill();
+                        ctx.restore();
+                    }
+                    requestAnimationFrame(animate);
+                }
+
+                window.onload = () => animate();
+                if (document.readyState === "complete") {
+                    animate();
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
